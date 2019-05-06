@@ -8,10 +8,9 @@ This repo has a set of resources to set up a GCP friendly linux environment on a
 2. [Open Powershell and install the Windows subsystem for Linux.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 3. [Download and install Ubuntu for Windows.](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0)
 4. [Set up Bash for Ubuntu in cmder.](https://gingter.org/2016/11/16/running-windows-10-ubuntu-bash-in-cmder/)
+5. Give yourself folder permissions...
 
-Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also when the terminal starts you can log in as a superuser (sudo) by executing `sudo -s`. This makes things easier.
-
-Also note that Ubuntu should ship with git installed already.
+Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also note that Ubuntu should ship with git installed already.
 
 ### Installing Anaconda
 
@@ -25,9 +24,9 @@ conda init
 
 7. Test that everything is working by running `conda --version`.
 8. Test the package manager by running `conda install seaborn`.
-9. You can start Jupyter by executing `jupyter notebook --allow-root`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
+9. You can start Jupyter by executing `jupyter notebook`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
 
-**NOTE:** For all package installations try with `conda` first and if the package is unavailable, try with `pip3`. Conda does optimise some packages for speed (in particular `scikit-learn` and `tensorflow`) and this is also (probably) a good way to avoid pip and conda conflicts.
+**NOTE:** If you try and install anything with `pip3` it probably won't work. You should firstly `conda`
 
 ### Setting up GCP
 
@@ -37,7 +36,7 @@ conda init
 
 12. [Install the GCP SDK for Ubuntu & Initialise your GCP Account](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with the GCP platform from the Ubuntu command line. Note that your installation may hang (mine did) but you can Ctrl+C to exit. There is a list of useful gcloud commands [here](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 
-13. Install the GCP SDK (aka google-cloud python package) for Python by executing `pip3 install google-cloud`. There is a huge list of code based resources [here](https://github.com/googleapis/google-cloud-python).
+13. Install the GCP SDK (aka google-cloud python package) for Python by executing `conda install -c conda-forge google-cloud-sdk`. There is a huge list of code based resources [here](https://github.com/googleapis/google-cloud-python).
 
 **NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP either through the command line or Python before trying the web interface since this aids repeatablility and once you get the hang of it, it is a lot quicker. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
 
