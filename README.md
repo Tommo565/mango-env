@@ -4,13 +4,21 @@ This repo has a set of resources to set up a GCP friendly linux environment on a
 
 ### Setting up your Ubuntu Environment
 
-1. [Download cmder](https://cmder.net/) Cmder is an enhanced terminal and I much prefer it to Powershell or the Ubuntu interface.
-2. [Open Powershell and install the Windows subsystem for Linux.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
-3. [Download and install Ubuntu for Windows.](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0)
-4. [Set up Bash for Ubuntu in cmder.](https://gingter.org/2016/11/16/running-windows-10-ubuntu-bash-in-cmder/)
-5. Give yourself folder permissions...
+1. [Download cmder](https://cmder.net/) cmder is an enhanced Windows terminal and has a lot of functionality that the Ubuntu terminal doesn't and it generally makes everything easier.
+2. [Open Powershell and install the Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+3. [Download and install Ubuntu for Windows](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0).
+4. Start Ubuntu for Windows in order to finish the installation and set it up. Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also note that Ubuntu should ship with git installed already.
+5. [Set up Bash for Ubuntu in cmder](https://gingter.org/2016/11/16/running-windows-10-ubuntu-bash-in-cmder/). Note that in addition to this guide, you'll also have to:
+  * Set the Start directory by clicking the Start Dir... button and copy and pasting the home directory of your linux installation above.
+  * Go to Options (Burger menu) > Settings and then on the 'General' settings page select the task you created in the 'Choose your startup task... dropdown menu.
+6. Give yourself sudo permissions by executing `sudo usermod -aG sudo {YOUR USERNAME}`
+7. Making sure that you're in your named home directory in Linux (e.g. the directory that's named with your username), give yourself folder permissions by running:
+```bash
+chown -R {USERNAME} ./
+chmod -R u+rX ./
+```
 
-Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also note that Ubuntu should ship with git installed already.
+The first command makes the user own the directory. The second command gives them full read and access permissions. The r gives read permission, the X gives 'execute' permission to directories, and not files.
 
 ### Installing Anaconda
 
@@ -21,9 +29,10 @@ Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\
 eval "$(/home/{YOUR_USER_NAME}/anaconda3/bin/conda shell.bash hook)"
 conda init
 ```
+And then restart cmder for the changes to take effect.
 
 7. Test that everything is working by running `conda --version`.
-8. Test the package manager by running `conda install seaborn`.
+8. Test the package manager by running `conda install seaborn`. This should also update Anaconda.
 9. You can start Jupyter by executing `jupyter notebook`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
 
 **NOTE:** If you try and install anything with `pip3` it probably won't work. You should firstly `conda`
@@ -63,6 +72,8 @@ ls                   # Lists the current directory
 cd {NAME}            # Changes to the specified directory
 cd ..                # Changes to the parent directory (aka up one level)
 mkdir {NAME}         # Creates a new directory
+rm {FILE_NAME}       # Delete a file
+rm -r {DIR_NAME}     # Delete a directory
 sudo ...             # Executes the subsequent command as a super user
 sudo -s              # Logs you in as sudo to your Ubuntu installation
 apt-get update       # Updates your local ubuntu package list to the newest version
