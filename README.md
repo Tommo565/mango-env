@@ -44,7 +44,7 @@ conda install {PACKAGE_NAME}
 
 If the package isn't available, then try `conda-forge`, which is a community led collection of recipes, build infrastructure and distributions for the conda package manager:
 ```bash
-conda install --channel "conda-forge" {PACKAGE_NAME}
+conda install -c conda-forge {PACKAGE_NAME}
 ```
 
 If the package you want isn't on conda-forge, then use pip3:
