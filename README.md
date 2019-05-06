@@ -35,7 +35,20 @@ And then restart cmder for the changes to take effect.
 8. Test the package manager by running `conda install seaborn`. This should also update Anaconda.
 9. You can start Jupyter by executing `jupyter notebook`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
 
-**NOTE:** If you try and install anything with `pip3` it probably won't work. You should firstly `conda`
+**NOTE:** When installing new packages, you should try `conda` first:
+```bash
+conda install {PACKAGE_NAME}
+```
+
+If the package isn't available, then try `conda-forge`, which is a community led collection of recipes, build infrastructure and distributions for the conda package manager:
+```bash
+conda install --channel "conda-forge" {PACKAGE_NAME}
+```
+
+If the package you want isn't on conda-forge, then use pip3:
+```bash
+pip3 install {PACKAGE_NAME}
+```
 
 ### Setting up GCP
 
@@ -89,6 +102,7 @@ gcloud auth login                # Login or switch user
 
 ## Further Resources
 
+* [Conda Forge](https://conda-forge.org/)
 * [GCloud Cheet Sheet](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 * [List of GCP Resources](https://github.com/gregsramblings/google-cloud-4-words)
 * [GCP GCloud API Reference](https://cloud.google.com/sdk/gcloud/reference/)
