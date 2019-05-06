@@ -60,19 +60,21 @@ pip3 install {PACKAGE_NAME}
 
 12. [Install the GCP SDK for Ubuntu & Initialise your GCP Account](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with the GCP platform from the Ubuntu command line. Note that your installation may hang (mine did) but you can Ctrl+C to exit. There is a list of useful gcloud commands [here](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 
-13. Install the GCP SDK (aka google-cloud python package) for Python by executing `conda install -c conda-forge google-cloud-sdk`. Note that this will downgrade some of your packages to ensure compatibility with GCP. This is fine. There is also a huge list of Python code based resources for GCP [here](https://github.com/googleapis/google-cloud-python).
+13. Install the GCP SDK (aka google-cloud python package) for Python by executing `conda install -c conda-forge google-cloud-sdk`. Note that this will take a while to do as it downgrades some of your packages to ensure compatibility with GCP. This is fine.
 
 **NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP either through the command line or Python before trying the web interface since this aids repeatablility and once you get the hang of it, it is a lot quicker. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
 
-## Setting up IntelliJ
+## IntelliJ
 
-IntelliJ is an IDE (Integrated Development Environment) which has excellent support from GCP. It's created by JetBrains who also create other IDEs such as PyCharm and WebStorm.
+IntelliJ is an IDE (Integrated Development Environment) which has excellent support from GCP. It's created by JetBrains who also create other IDEs such as PyCharm and WebStorm. 
 
-Why IntelliJ?
-* Excellent support from GCP
-* Plugins to code in Python, R etc.
-* More versatile than PyCharm
+### Why IntelliJ?
 
+IntelliJ is one of two major IDEs well supported by GCP, the other being Visual Studio. Visual Studio is great in it's own right, but is set up primarily to be used wih Azure. Additionally the GCP / IntelliJ integration is better developed than Visual Studio, which at the time of writing is still in Beta.
+
+You might be also wondering why I'm reccomending IntelliJ over PyCharm, and that's a great question. In short IntelliJ is far more extensible than PyCharm - it can be extended to act as an IDE for other languages including Python, R, Scala etc. whereas PyCharm can't. For GCP projects where you might end up using more than one language across your project, this makes a lot of sense.
+
+### Setting Up IntelliJ
 
 ## Jargon buster
 
