@@ -15,8 +15,14 @@ Also note that Ubuntu should ship with git and Python2 installed already.
 
 5. [Install Ananconda for Linux](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart) Whilst you could install Python3 and packages manually, Anaconda is a lot easier, and whilst the `conda` package manager isn't as good as `pip` a lot of the bugs around interoperability with `pip` have been removed. There is a list of all the packages that ship with Anaconda [here](https://docs.anaconda.com/anaconda/packages/py3.7_linux-64/).
 
-6. Test that everything is working by running `conda --version`.
-7. Test the package manager by running `conda install seaborn`.
+6. You might also need to initialise Anaconda. You can do this by running:
+```bash
+eval "$(/home/{YOUR_USER_NAME}/anaconda3/bin/conda shell.bash hook)"
+conda init
+```
+
+7. Test that everything is working by running `conda --version`.
+8. Test the package manager by running `conda install seaborn`.
 
 
 ## Docker
