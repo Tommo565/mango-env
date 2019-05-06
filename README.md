@@ -33,28 +33,52 @@ conda init
 
 11. [Install the pre-requisites software for GCP](https://cloud.google.com/python/setup) Be sure to select the Linux tab to get the right instructions. This guide contains the pre-requisites (e.g. Python 2, 3 & pip). It will detect your Anaconda Python3 installation and just download and install Python2 (which is required by GCP).
 
-12. [Install the GCP SDK for Ubuntu](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with 
+12. [Install the GCP SDK for Ubuntu & Initialise your GCP Account](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with the GCP platform from the Ubuntu command line. Note that your installation may hang (mine did) but you can Ctrl+C to exit. There is a list of useful gcloud commands [here](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 
+13. Install the GCP SDK (aka google-cloud python package) for Python by executing `pip3 install google-cloud`. There is a huge list of code based resources [here](https://github.com/googleapis/google-cloud-python).
 
+**NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP either through the command line or Python before trying the web interface since this aids repeatablility and once you get the hang of it, it is a lot quicker. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
 
+## Setting up IntelliJ
 
-## Docker
+IntelliJ is an IDE (Integrated Development Environment)
 
 
 ## Jargon buster
 
-`sudo`: Stands for 'super-user do' and is a way to run administrator commands in Linux. Note that you can do a lot of damage with sudo if you're not careful, so it's best to check thigns out before running any form of linux sudo command, especially if you're logged in with `sudo -s`
+`sudo`: stands for 'super-user do' and is a way to run administrator commands in Linux. Note that you can do a lot of damage with sudo if you're not careful, so it's best to check thigns out before running any form of linux sudo command, especially if you're logged in with `sudo -s`
 
-`apt`: stands for 'Advanced Packaging Tool' which basically means that it's the package manager for Ubuntu, similar to how `pip` is the package manager for Python. 
+`apt`: stands for 'Advanced Packaging Tool' which basically means that it's the package manager for Ubuntu, similar to how `pip` is the package manager for Python.
+
+`ssh`: is a cryptographic network protocol for operating network services securely over an unsecured network. Typical applications include remote command-line login and remote command execution, but any network service can be secured with SSH. 
 
 ## Useful Commands
 
 ```bash
-ls               # Lists the current directory
-cd {NAME}        # Changes to the specified directory
-cd ..            # Changes to the parent directory (aka up one level)
-mkdir {NAME}     # Creates a new directory
-sudo ...         # Executes the subsequent command as a super user
-sudo -s          # Logs you in as sudo to your Ubuntu installation
-apt-get update   # Downloads the package lists and updates them to the newest versions
+
+# General Commands
+
+ls                   # Lists the current directory
+cd {NAME}            # Changes to the specified directory
+cd ..                # Changes to the parent directory (aka up one level)
+mkdir {NAME}         # Creates a new directory
+sudo ...             # Executes the subsequent command as a super user
+sudo -s              # Logs you in as sudo to your Ubuntu installation
+apt-get update       # Updates your local ubuntu package list to the newest version
+conda install {NAME} # Install a package using conda
+pip3 install {NAME}  # Install a package using pip
+
+# Gcloud Commands
+
+gcloud config set project {NAME} # Set the default GCP project
+gcloud auth login                # Login or switch user
+
 ```
+
+## Further Resources
+
+* [GCloud Cheet Sheet](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
+* [List of GCP Resources](https://github.com/gregsramblings/google-cloud-4-words)
+* [GCP GCloud API Reference](https://cloud.google.com/sdk/gcloud/reference/)
+* [GCP Python SDK Github](https://github.com/googleapis/google-cloud-python)
+* [GCP Python API reference](https://cloud.google.com/python/docs/reference/)
