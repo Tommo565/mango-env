@@ -2,7 +2,7 @@
 
 This repo has a set of resources to set up a GCP friendly linux environment on a windows machine.
 
-GCP uses Linux, specifically Ubuntu, as their OS for their products, so it makes sense to emulate that in your local environment so taht code is transferrable from your local machine to the GCP platform.
+GCP uses Linux, specifically Ubuntu, as their OS for their products, so it makes sense to emulate that in your local environment so that code is transferrable from your local machine to the GCP platform.
 
 ### Creating and Setting up your Ubuntu Environment
 
