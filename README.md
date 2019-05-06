@@ -66,7 +66,12 @@ pip3 install {PACKAGE_NAME}
 
 ## Setting up IntelliJ
 
-IntelliJ is an IDE (Integrated Development Environment)
+IntelliJ is an IDE (Integrated Development Environment) which has excellent support from GCP. It's created by JetBrains who also create other IDEs such as PyCharm and WebStorm.
+
+Why IntelliJ?
+* Excellent support from GCP
+* Plugins to code in Python, R etc.
+* More versatile than PyCharm
 
 
 ## Jargon buster
