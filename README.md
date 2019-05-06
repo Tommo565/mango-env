@@ -79,11 +79,16 @@ IntelliJ is an IDE (Integrated Development Environment) which has excellent supp
 
 ### Why IntelliJ?
 
-IntelliJ is one of two major IDEs well supported by GCP, the other being Visual Studio. Visual Studio is great in it's own right, but is set up primarily to be used wih Azure. Additionally the GCP / IntelliJ integration is better developed than Visual Studio, which at the time of writing is still in Beta.
+IntelliJ is one of two major IDEs well supported by GCP, the other being MS Visual Studio. Visual Studio is great in it's own right, but is set up primarily to be used wih Azure. Additionally the GCP / IntelliJ integration is better developed than Visual Studio, which at the time of writing is still in Beta.
 
 You might be also wondering why I'm reccomending IntelliJ over PyCharm, and that's a great question. In short IntelliJ is far more extensible than PyCharm - it can be extended to act as an IDE for other languages including Python, R, Scala etc. whereas PyCharm can't. For GCP projects where you might end up using more than one language across your project, this makes a lot of sense.
 
 ### Setting Up IntelliJ
+
+1. [Download and install IntelliJ Community edition](https://www.jetbrains.com/idea/download/) Be sure to use the .exe file if possible.
+2. Run the downloaded .exe file.
+3. For the first **Installation Options** pop up, check all the boxes.
+4. Install the to default JetBrains folder. Note that you'll need to restart your computer after the installation has completed.
 
 ## Jargon buster
 
