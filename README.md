@@ -2,7 +2,9 @@
 
 This repo has a set of resources to set up a GCP friendly linux environment on a windows machine.
 
-### Setting up your Ubuntu Environment
+GCP uses Linux, specifically Ubuntu, as their OS for their products, so it makes sense to emulate that in your local environment so taht code is transferrable from your local machine to the GCP platform.
+
+### Creating and Setting up your Ubuntu Environment
 
 1. [Download cmder](https://cmder.net/) cmder is an enhanced Windows terminal and has a lot of functionality that the Ubuntu terminal doesn't and it generally makes everything easier.
 2. [Open Powershell and install the Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
