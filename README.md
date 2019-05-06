@@ -9,8 +9,8 @@ This repo has a set of resources to set up a GCP friendly linux environment on a
 3. [Download and install Ubuntu for Windows](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0).
 4. Start Ubuntu for Windows in order to finish the installation and set it up. Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also note that Ubuntu should ship with git installed already.
 5. [Set up Bash for Ubuntu in cmder](https://gingter.org/2016/11/16/running-windows-10-ubuntu-bash-in-cmder/). Note that in addition to this guide, you'll also have to:
-  * Set the Start directory by clicking the Start Dir... button and copy and pasting the home directory of your linux installation above.
-  * Go to Options (Burger menu) > Settings and then on the 'General' settings page select the task you created in the 'Choose your startup task... dropdown menu.
+    * Set the Start directory by clicking the Start Dir... button and copy and pasting the home directory of your linux installation above.
+    * Go to Options (Burger menu) > Settings and then on the 'General' settings page select the task you created in the 'Choose your startup task... dropdown menu.
 6. Give yourself sudo permissions by executing `sudo usermod -aG sudo {YOUR USERNAME}`
 7. Making sure that you're in your named home directory in Linux (e.g. the directory that's named with your username), give yourself folder permissions by running:
 ```bash
