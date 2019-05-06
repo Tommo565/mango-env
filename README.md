@@ -60,7 +60,16 @@ pip3 install {PACKAGE_NAME}
 
 12. [Install the GCP SDK for Ubuntu & Initialise your GCP Account](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with the GCP platform from the Ubuntu command line. Note that your installation may hang (mine did) but you can Ctrl+C to exit. There is a list of useful gcloud commands [here](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 
-13. Install the GCP SDK (aka google-cloud python package) for Python by executing `conda install -c conda-forge google-cloud-sdk`. Note that this will take a while to do as it downgrades some of your packages to ensure compatibility with GCP. This is fine.
+13. Install the following packages on GCP:
+```
+conda install -c conda-forge google-api-python-client
+conda install -c conda-forge google-cloud-sdk
+conda install -c conda-forge google-cloud-storage
+conda install -c conda-forge google-cloud-bigquery
+``` 
+
+
+Note that this will take a while to do as it downgrades some of your packages to ensure compatibility with GCP. This is fine.
 
 **NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP either through the command line or Python before trying the web interface since this aids repeatablility and once you get the hang of it, it is a lot quicker. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
 
@@ -115,6 +124,7 @@ gcloud auth login                # Login or switch user
 * [GCloud Cheet Sheet](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 * [List of GCP Resources](https://github.com/gregsramblings/google-cloud-4-words)
 * [GCP GCloud API Reference](https://cloud.google.com/sdk/gcloud/reference/)
+* [GCP Python Client Libraries](https://cloud.google.com/python/docs/reference/)
 * [GCP Python SDK Github](https://github.com/googleapis/google-cloud-python)
 * [GCP Python API reference](https://cloud.google.com/python/docs/reference/)
 * [Scripting gcloud commands](https://cloud.google.com/sdk/docs/scripting-gcloud)
