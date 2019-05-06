@@ -2,9 +2,7 @@
 
 This repo has a set of resources to set up a GCP friendly linux environment on a windows machine.
 
-## Ubuntu for Windows
-
-## Setting up your Environment
+### Setting up your Ubuntu Environment
 
 1. [Download cmder](https://cmder.net/) Cmder is an enhanced terminal and I much prefer it to Powershell or the Ubuntu interface.
 2. [Open Powershell and install the Windows subsystem for Linux.](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
@@ -14,6 +12,8 @@ This repo has a set of resources to set up a GCP friendly linux environment on a
 Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also when the terminal starts you can log in as a superuser (sudo) by executing `sudo -s`. This makes things easier.
 
 Also note that Ubuntu should ship with git installed already.
+
+### Installing Anaconda
 
 5. [Install Ananconda for Linux](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart) Whilst you could install Python3 and packages manually, Anaconda is a lot easier, and whilst the `conda` package manager isn't as good as `pip` a lot of the bugs around interoperability with `pip` have been removed. There is a list of all the packages that ship with Anaconda [here](https://docs.anaconda.com/anaconda/packages/py3.7_linux-64/).
 
@@ -28,6 +28,8 @@ conda init
 9. You can start Jupyter by executing `jupyter notebook --allow-root`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
 
 **NOTE:** For all package installations try with `conda` first and if the package is unavailable, try with `pip3`. Conda does optimise some packages for speed (in particular `scikit-learn` and `tensorflow`) and this is also (probably) a good way to avoid pip and conda conflicts.
+
+### Setting up GCP
 
 10. [Create a GCP Account](https://cloud.google.com/) Be sure to also sign up for the $300 free credit.
 
