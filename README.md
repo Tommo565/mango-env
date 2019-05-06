@@ -111,3 +111,4 @@ gcloud auth login                # Login or switch user
 * [GCP Python SDK Github](https://github.com/googleapis/google-cloud-python)
 * [GCP Python API reference](https://cloud.google.com/python/docs/reference/)
 * [Scripting gcloud commands](https://cloud.google.com/sdk/docs/scripting-gcloud)
+* [Google Cloud for IntelliJ](https://cloud.google.com/code/docs/intellij/)
