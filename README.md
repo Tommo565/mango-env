@@ -22,18 +22,18 @@ The first command makes the user own the directory. The second command gives the
 
 ### Installing Anaconda
 
-5. [Install Ananconda for Linux](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart) Whilst you could install Python3 and packages manually, Anaconda is a lot easier, and whilst the `conda` package manager isn't as good as `pip` a lot of the bugs around interoperability with `pip` have been removed. There is a list of all the packages that ship with Anaconda [here](https://docs.anaconda.com/anaconda/packages/py3.7_linux-64/).
+8. [Install Ananconda for Linux](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart) Whilst you could install Python3 and packages manually, Anaconda is a lot easier, and whilst the `conda` package manager isn't as good as `pip` a lot of the bugs around interoperability with `pip` have been removed. There is a list of all the packages that ship with Anaconda [here](https://docs.anaconda.com/anaconda/packages/py3.7_linux-64/).
 
-6. You might also need to initialise Anaconda. You can do this by running:
+9. You might also need to initialise Anaconda. You can do this by running:
 ```bash
 eval "$(/home/{YOUR_USER_NAME}/anaconda3/bin/conda shell.bash hook)"
 conda init
 ```
 And then restart cmder for the changes to take effect.
 
-7. Test that everything is working by running `conda --version`.
-8. Test the package manager by running `conda install seaborn`. This should also update Anaconda.
-9. You can start Jupyter by executing `jupyter notebook`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
+10. Test that everything is working by running `conda --version`.
+11. Test the package manager by running `conda install seaborn`. This should also update Anaconda.
+1. You can start Jupyter by executing `jupyter notebook`. This should start the Notebook Server. You'll probably have to copy and paste the localhost link into your browser however.
 
 **NOTE:** When installing new packages, you should try `conda` first:
 ```bash
@@ -52,9 +52,9 @@ pip3 install {PACKAGE_NAME}
 
 ### Setting up GCP
 
-10. [Create a GCP Account](https://cloud.google.com/) Be sure to also sign up for the $300 free credit.
+13. [Create a GCP Account](https://cloud.google.com/) Be sure to also sign up for the $300 free credit.
 
-11. [Install the pre-requisites software for GCP](https://cloud.google.com/python/setup) Be sure to select the Linux tab to get the right instructions. This guide contains the pre-requisites (e.g. Python 2, 3 & pip). It will detect your Anaconda Python3 installation and just download and install Python2 (which is required by GCP).
+11. [Install the pre-requisites software for GCP](https://cloud.google.com/python/setup) Be sure to select the Linux tab to get the right instructions. This guide contains the pre-requisites (e.g. Python 2, 3 & pip). It will detect your Anaconda Python3 installation and just download and install Python2 (which is required by GCP). Note that you don't have to install `virtualenv` since this is included on Anaconda.
 
 12. [Install the GCP SDK for Ubuntu & Initialise your GCP Account](https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu). This allows you to interact with the GCP platform from the Ubuntu command line. Note that your installation may hang (mine did) but you can Ctrl+C to exit. There is a list of useful gcloud commands [here](https://gist.github.com/pydevops/cffbd3c694d599c6ca18342d3625af97)
 
