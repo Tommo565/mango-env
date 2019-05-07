@@ -134,3 +134,4 @@ gcloud auth login                # Login or switch user
 * [GCP Python API reference](https://cloud.google.com/python/docs/reference/)
 * [Scripting gcloud commands](https://cloud.google.com/sdk/docs/scripting-gcloud)
 * [Google Cloud for IntelliJ](https://cloud.google.com/code/docs/intellij/)
+* [Setting up bash on IntelliJ](https://intellij-support.jetbrains.com/hc/en-us/community/posts/207698489-How-can-you-use-new-Bash-on-Ubuntu-on-Windows-terminal-in-Webstorm-)
