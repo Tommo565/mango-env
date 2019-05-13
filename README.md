@@ -1,6 +1,6 @@
 ## mango-env
 
-This repo has a set of resources to set up a GCP friendly linux environment on a windows machine.
+This repo has a set of resources to set up a GCP friendly linux environment on a Windows machine.
 
 GCP uses Linux, specifically Ubuntu, as their OS for their products, so it makes sense to emulate that in your local environment so that code is transferrable from your local machine to the GCP platform.
 
@@ -22,7 +22,9 @@ chmod -R u+rX ./
 
 The first command makes the user own the directory. The second command gives them full read and access permissions. The r gives read permission, the X gives 'execute' permission to directories, and not files.
 
-### Installing Anaconda
+Note that if you're happy using the Ubuntu kernel, you needn't necessarily install cmder.
+
+### Installing Anaconda3
 
 8. [Install Ananconda for Linux](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart) Whilst you could install Python3 and packages manually, Anaconda is a lot easier, and whilst the `conda` package manager isn't as good as `pip` a lot of the bugs around interoperability with `pip` have been removed. There is a list of all the packages that ship with Anaconda [here](https://docs.anaconda.com/anaconda/packages/py3.7_linux-64/).
 
@@ -71,7 +73,7 @@ conda install -c conda-forge google-cloud-bigquery
 
 Note that this will take a while to do as it downgrades some of your packages to ensure compatibility with GCP. This is fine.
 
-**NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP either through the command line or Python before trying the web interface since this aids repeatablility and once you get the hang of it, it is a lot quicker. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
+**NOTE:** There are many different ways to interact with GCP (e.g. command line, GCP website, Python) as there are a TON of tutorials, references, guides etc. Generally I think it's best to try and interact with GCP through the command line or Python if it's part of production code. However there are some things that you can't do with the command line, so you will have to use the web interface for these tasks.
 
 ## IntelliJ
 
@@ -81,7 +83,7 @@ IntelliJ is an IDE (Integrated Development Environment) which has excellent supp
 
 IntelliJ is one of two major IDEs well supported by GCP, the other being MS Visual Studio. Visual Studio is great in it's own right, but is set up primarily to be used wih Azure. Additionally the GCP / IntelliJ integration is better developed than Visual Studio, which at the time of writing is still in Beta.
 
-You might be also wondering why I'm reccomending IntelliJ over PyCharm, and that's a great question. In short IntelliJ is far more extensible than PyCharm - it can be extended to act as an IDE for other languages including Python, R, Scala etc. whereas PyCharm can't. For GCP projects where you might end up using more than one language across your project, this makes a lot of sense.
+You might be also wondering why I'm reccomending IntelliJ over PyCharm, and that's a great question. In short IntelliJ is far more extensible than PyCharm - some of the plugins that are developed are only available for IntelliJ, or are developed for IntelliJ first.
 
 ### Setting Up IntelliJ
 
@@ -89,10 +91,20 @@ You might be also wondering why I'm reccomending IntelliJ over PyCharm, and that
 2. Run the downloaded .exe file.
 3. For the first **Installation Options** pop up, check all the boxes.
 4. Install the to default JetBrains folder. Note that you'll need to restart your computer after the installation has completed.
+5. Once you've installed it, there are a good set of [tutorials available from the JetBrains wbsite](https://www.jetbrains.com/idea/documentation/) to help you figure out how to use it and set it up. It can be a bit of a culture shock if coming from more simple text editors and Jupyter / RStudio but it does make a lot of things easier once you get the hang of it.
+6. You can also install plugins for IntelliJ - these are handy ways to extend the functionality, help perform certain tasks or just make the interface look nicer! You can access the Plugins settings to browse / install / remove plugins by selecting File > Settings > Plugins or Ctrl + Alt + S to bring up the settings menu and then selecting plugins. Some plugins you might want to consider are as follows:
+
+* [Python Community Edition](https://plugins.jetbrains.com/plugin/7322-python-community-edition) PLugin to turn IntelliJ into a Python IDE. Install this first!
+* [Markdown Navigator](https://plugins.jetbrains.com/plugin/7896-markdown-navigator) Linting + a preview pane for Markdown documents.
+* [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox) Some Helper tools for git and version control.
+* [Cloud Code](https://plugins.jetbrains.com/plugin/8079-cloud-code) Tools for managing GCP. I expect this to be added to as time goes on.
+* [Material Theme UI](https://plugins.jetbrains.com/plugin/8006-material-theme-ui) Tools and options for changing your UI.
+
+TODO: I'm still figuring out IntelliJ myself but hope to add to this section of the guide shortly.
 
 ## Jargon buster
 
-`sudo`: stands for 'super-user do' and is a way to run administrator commands in Linux. Note that you can do a lot of damage with sudo if you're not careful, so it's best to check thigns out before running any form of linux sudo command, especially if you're logged in with `sudo -s`
+`sudo`: stands for 'super-user do' and is a way to run administrator commands in Linux. Note that you can do a lot of damage with sudo if you're not careful, so it's best to check things out before running any form of linux sudo command, especially if you're logged in with `sudo -s`
 
 `apt`: stands for 'Advanced Packaging Tool' which basically means that it's the package manager for Ubuntu, similar to how `pip` is the package manager for Python.
 
