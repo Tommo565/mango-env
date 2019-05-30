@@ -68,6 +68,7 @@ conda install -c conda-forge google-api-python-client
 conda install -c conda-forge google-cloud-sdk
 conda install -c conda-forge google-cloud-storage
 conda install -c conda-forge google-cloud-bigquery
+pip2 install google-cloud-sdk
 ``` 
 
 
