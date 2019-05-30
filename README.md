@@ -6,7 +6,7 @@ GCP uses Linux, specifically Ubuntu, as their OS for their products, so it makes
 
 ### Creating and Setting up your Ubuntu Environment
 
-1. [Download cmder](https://cmder.net/) cmder is an enhanced Windows terminal and has a lot of functionality that the Ubuntu terminal doesn't and it generally makes everything easier.
+1. [Download cmder](https://cmder.net/) cmder is an enhanced Windows terminal and has a lot of functionality that the Ubuntu terminal doesn't and it generally makes everything easier, not least because you can copy and paste into the terminal.
 2. [Open Powershell and install the Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 3. [Download and install Ubuntu for Windows](https://tutorials.ubuntu.com/tutorial/tutorial-ubuntu-on-windows#0).
 4. Start Ubuntu for Windows in order to finish the installation and set it up. Note that you can access your Ubuntu files at `C:\Users\your-name\AppData\Local\Packages\CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc\` (or somewhere similar). Also note that Ubuntu should ship with git installed already.
